@@ -9,4 +9,15 @@ describe('app', () => {
   it('renders without crashing', () => {
     mount(<app />);
   });
+
+  it('Enter text and check if button is enabled', () => {
+    const page = mount(<app/>);
+    const tInput = page.find('[name="t"]');
+    
+    tInput.value = 'test string';
+    expect(tInput.value).toBe('test string');
+    
+    const button = page.find('button');
+    expect(button.prop('disabled')).toEqual(false);
+  });
 });

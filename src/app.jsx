@@ -1,16 +1,11 @@
 import React from 'react';
-import Navigation from './components/Navigation';
+import InputWithButton from './components/InputWithButton';
 import 'normalize.css';
 import 'styles/index.scss';
 
 const App = () => (
   <div className='App'>
-    <Navigation/>
-    <div>
-      <h1>It Works!</h1>
-      <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-      <p>Enjoy!</p>
-    </div>
+    <InputWithButton />
   </div>
 );
 

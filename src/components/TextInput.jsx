@@ -12,7 +12,7 @@ class TextInput extends React.Component {
 
     handleChange(e) {
         const value = e.target.value;
-        e.persist();
+        // e.persist();
         this.setState({ value }, () => {
             this.props.onChange(value);
         });

@@ -11,20 +11,20 @@ class InputWithButton extends React.Component {
         };
     }
 
-    handleTextChange(value) {
-        this.setState({ t: value });
+    handleTextChange(e) {
+        this.setState({ t: e.target.value });
     }
 
     render() {
         return (<div>
-                <TextInput
-                    name="t"
-                    value={this.state.t}
-                    onChange={value => this.handleTextChange(value)}/>
-                <button disabled={this.state.t===''}>
-                        Button
-                </button>
-            </div>);
+                    <TextInput
+                        name="t"
+                        value={this.state.t}
+                        onChange={value => this.handleTextChange(value)}/>
+                    <button id="button1" disabled={this.state.t===''}>
+                        {this.state.t === '' ? 'Button' : this.state.t}
+                    </button>
+                </div>);
     }
 }
 
